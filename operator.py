@@ -128,3 +128,89 @@ print 'c **= a:', c
 
 c //= a
 print 'c //= a:', c
+
+# python中的位运算
+# &按位与运算符,如果两个相应位都为1,则为1,否则为0
+# |按位或运算符,如果两个相应位都为0,则为0,否则为1
+# ^按位异或运算,如果两个相应位相异时,结果为1
+# ~按位取反
+# <<左移运算,
+# >>右移运算
+
+a = 60 # 60 = 0011 1100
+b = 13 # 13 = 0000 1101
+
+c = 0
+
+print 'a & b:', a & b
+
+print 'a | b:', a | b
+
+print 'a ^ b:', a ^ b
+
+print '~ a:', ~ a
+
+print 'a << 2:', a << 2
+
+print 'a >> 2:', a >> 2
+
+# python中的逻辑运算符
+# and 与
+# or  或
+# not 非
+
+a = 10
+b = 20
+
+if ( a and b ):
+    print 'a和b都为true'
+else:
+    print 'a和b不同为真'
+
+if ( a or b ):
+    print 'a或者b至少有一个为真'
+else:
+    print 'a和b都为假'
+
+if not( a and b ):
+    print 'a和b不全是真'
+else:
+    print 'a和b都是真'
+
+# python中的成员运算符
+# in     如果在指定序列中找到值返回true,否则返回false
+# not in 如果在指定的序列找不到改值返回true,否则返回false
+
+a = 10
+b = 20
+
+list1 = [1, 2, 3, 4, 5]
+
+if ( a in list1 ):
+    print 'a在list1中'
+else:
+    print 'a不在list1中'
+
+if ( b not in list1 ):
+    print 'b不在list1中'
+else:
+    print 'b在list1中'
+
+# python中的身份运算符
+# is     判断两个标识符是不是引用同一个对象
+# is not 判断两个标识符是不是引用不同的对象
+
+a = 20
+b = 20
+
+if ( a is b ):
+    print 'a和b有相同的标识'
+else:
+    print 'a和b没有相同的标识'
+
+b = 30
+
+if ( a is not b ):
+    print 'a和b没有相同的标识'
+else:
+    print 'a和b有相同的标识'
