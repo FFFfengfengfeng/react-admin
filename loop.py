@@ -153,5 +153,13 @@ while count < 100:
         sum += count
 print sum
 
-# pass语句
-# 实例
+# 输出三角形
+
+i = 0
+j = 0
+
+while i < 4:
+    while j < 4:
+        print ' ' * (3 - j), '*' * (2 * i + 1)
+        i += 1
+        j += 1
