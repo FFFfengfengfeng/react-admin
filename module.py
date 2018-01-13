@@ -27,3 +27,41 @@ print sum_total(1, 2, 3)
 
 # 命名空间和作用域
 
+price = 1
+def add_price():
+    global price
+    price += 1
+add_price()
+print price
+
+# dir()函数是一个排好序的字符串序列,内容是一个模块里定义的名字
+# 返回的列表容纳了在一个模块里定义的所有模块,变量,函数
+# 实例
+import math
+
+content = dir(math)
+
+print content
+print '----------------'
+
+# globals()和locals()函数
+# 根据调用地方的不同,globals()和locals()函数可以返回全局和局部命名空间里的名字
+# 如果在函数内使用locals()返回的是所有能在该函数里访问的命名
+# 如果在函数内调用globals()返回的是所有能在改函数访问的全局名字
+
+def test_global():
+    glo = globals()
+    loc = locals()
+    print glo
+    print '-------------------'
+    print loc
+test_global()
+
+# reload()函数
+# 当一个模块被导入到一个脚本,模块顶层部分的代码只会被执行一次。
+# 因此,如果你想重新执行模块里顶层部分的代码,可以用reload()函数,该函数会重新导入之前的模块
+# 语法reload(模块名)
+
+# python中的包
+# 包是一个分层次的文件目录结构,它定义了一个由模块及子包,和子包下的子包等组成的python的应用环境
+#
