@@ -6,12 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <Hello></Hello>
-        </div>
-        <p className="App-intro">
-          你可以在 <code>src/App.js</code> 文件中修改。
-        </p>
+        <Hello name="FFF"></Hello>
+        <Hello name="WWW"></Hello>
       </div>
     );
   }
