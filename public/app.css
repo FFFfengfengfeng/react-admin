@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    background-color: #FFF;
+    font-family: 'Microsoft YaHei';
+}
+
+/*类样式*/
+.header{
+    height: 60px;
+    background-color: #FFF;
+    border-bottom: 1px solid #F2F2F2;
+}
