@@ -4,13 +4,14 @@ class Hello extends Component {
     constructor(pros) {
         super(pros);
         this.state = {
-            color: 'blue'
+            color: 'blue',
+            clickCount: 0
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.setStateClick = this.setStateClick.bind(this);
     }
-    handleClick() {
+    setStateClick() {
         this.setState({
-            color: 'red'
+            color: 'yellow'
         });
     }
     render() {
@@ -20,7 +21,8 @@ class Hello extends Component {
         return(
             <div>
                 <h1 style={style}>Hello World {this.props.name}</h1>
-                <a href="javascript:;" onClick={this.handleClick}>修改</a>
+                <p>{this.state.clickCount}</p>
+                <a href="javascript:;" onClick={this.setStateClick}>setState</a><br/>
             </div>
         );
     }
