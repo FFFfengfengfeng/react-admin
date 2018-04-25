@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
+// import ReactDom from 'react-dom';
 import { 
     BrowserRouter as Router,
     Route,
-    Link,
-    Redirect,
-    NavLink,
     Switch
 } from 'react-router-dom';
 
-/**
- * 引入组件
- */
+//引入组件
 import User from './views/User';
 import Profile from './views/Profile';
 import Header from './views/components/Header';
+import Sidebar from './views/components/Sidebar';
 
 /**
  * 
@@ -34,14 +30,11 @@ class App extends Component {
             <Router>
                 <div>
                     <Header></Header>
-                    <ul>
-                        <li><NavLink activeStyle={activeStyle} to="/user">用户管理</NavLink></li>
-                        <li><NavLink activeStyle={activeStyle} to="/profile">个人中心</NavLink></li>
-                        <Switch>
-                            <Route path="/user" component={ User }/>
-                            <Route path="/profile" component={ Profile }/>
-                        </Switch>
-                    </ul>
+                    <Sidebar></Sidebar>
+                    <Switch>
+                        <Route path="/user" component={ User }/>
+                        <Route path="/profile" component={ Profile }/>
+                    </Switch>
                 </div>
             </Router>
         );
