@@ -28,7 +28,7 @@ class App extends Component {
         }
         return (
             <Router>
-                <div>
+                <div className='container'>
                     <Header></Header>
                     <Sidebar></Sidebar>
                     <Switch>
