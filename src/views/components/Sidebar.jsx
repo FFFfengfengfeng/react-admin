@@ -18,8 +18,9 @@ class Sidebar extends Component {
         return (
             <div className='sidebar'>
                 <ul className='menu'>
-                    <li><Link to="/user">用户管理</Link></li>
-                    <li><Link to="/user">用户管理</Link></li>
+                    <li><h3>FFF后台管理</h3></li>
+                    <li><NavLink exact activeClassName='active' to="/">文章管理</NavLink></li>
+                    <li><NavLink activeClassName='active' to="/static">数据统计</NavLink></li>
                 </ul>
             </div>
         );

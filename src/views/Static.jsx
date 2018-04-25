@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 import { 
-    Link
+    Link,
 } from 'react-router-dom';
 
 /**
  * 
  * 
- * @class User
+ * @class Static
  * @extends {Component}
  */
-class User extends Component {
+class Static extends Component {
     constructor() {
         super();
     }
     render() {
         return (
-            <div>
-                <p>用户管理</p>
-                <Link to='/'>返回</Link>
+            <div className='main'>
+                <p>数据统计</p>
             </div>
         );
     }
 }
 
-export default User;
+export default Static;

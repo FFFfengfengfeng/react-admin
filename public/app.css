@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body,html{
     background-color: #FFF;
@@ -8,7 +9,9 @@ body,html{
     height: 100%;
     background-color: #F2F2F2;
 }
-
+ul,li,ol{
+    list-style: none;
+}
 /*id样式*/
 #root{
     height: 100%;
@@ -23,7 +26,7 @@ body,html{
 }
 .header{
     height: 60px;
-    background-color: #FFF;
+    background-color: #2A3867;
     border-bottom: 1px solid #F2F2F2;
 }
 .sidebar{
@@ -32,5 +35,33 @@ body,html{
     left: 0;
     bottom: 0;
     top: 60px;
-    background-color: #2A3867;
+    background-color: #FFF;
+}
+.main{
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+}
+.menu{
+    text-align: center;
+}
+.menu h3{
+    padding: 15px 0;
+    font-weight: normal;
+    color: #999;
+}
+.menu a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px 0;
+    transition: all .25s;
+    border-left: 4px solid transparent;
+}
+.menu a.active{
+    background-color: #F2F2F2;
+    border-left: 4px solid #2A3867;
 }

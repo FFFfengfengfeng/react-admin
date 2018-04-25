@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 //引入组件
-import User from './views/User';
-import Profile from './views/Profile';
+import Article from './views/Article';
+import Static from './views/Static';
 import Header from './views/components/Header';
 import Sidebar from './views/components/Sidebar';
 
@@ -31,10 +31,8 @@ class App extends Component {
                 <div className='container'>
                     <Header></Header>
                     <Sidebar></Sidebar>
-                    <Switch>
-                        <Route path="/user" component={ User }/>
-                        <Route path="/profile" component={ Profile }/>
-                    </Switch>
+                    <Route exact path="/" component={ Article }/>
+                    <Route path="/static" component={ Static }/>
                 </div>
             </Router>
         );
