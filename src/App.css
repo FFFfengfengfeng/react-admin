@@ -179,6 +179,32 @@ ul,li,ol{
     padding: 0 20px;
     vertical-align: middle;
 }
+.btn-save{
+    margin-right: 20px;
+}
+.markdown{
+    border: 1px solid #F2F2F2;
+    background-color: #FFF;
+    margin-bottom: 30px;
+}
+.form span{
+    display: inline-block;
+    width: 50px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 14px;
+}
+.form input{
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #CCC;
+    transition: all .25s;
+    outline: none;
+    padding-left: 10px;
+    width: 300px;
+    font-size: 14px;
+}
 /*common*/
 .clear::after{
     display: block;

@@ -5,6 +5,7 @@ import {
     Route,
     Switch,
 } from 'react-router-dom';
+import './App.css';
 
 //引入组件
 import ArticleList from './views/Article/List';
