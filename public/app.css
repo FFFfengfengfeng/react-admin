@@ -26,16 +26,17 @@ ul,li,ol{
 }
 .header{
     height: 60px;
-    background-color: #2A3867;
+    background-color: #FFF;
     border-bottom: 1px solid #F2F2F2;
 }
 .sidebar{
-    position: absolute;
+    position: fixed;
     width: 220px;
     left: 0;
     bottom: 0;
-    top: 60px;
-    background-color: #FFF;
+    top: 0;
+    background-color: #000;
+    box-shadow: 1px 0px 20px #999;
 }
 .main{
     position: absolute;
@@ -51,17 +52,18 @@ ul,li,ol{
 .menu h3{
     padding: 15px 0;
     font-weight: normal;
-    color: #999;
+    color: #FFF;
+    height: 59px;
+    background-color: #2A3867;
 }
 .menu a{
     text-decoration: none;
-    color: #333;
+    color: #999;
     display: block;
-    padding: 15px 0;
+    padding: 13px 0;
     transition: all .25s;
-    border-left: 4px solid transparent;
 }
 .menu a.active{
-    background-color: #F2F2F2;
-    border-left: 4px solid #2A3867;
+    background-color: #1890FF;
+    color: #FFF;
 }

@@ -31,8 +31,8 @@ class App extends Component {
                 <div className='container'>
                     <Header></Header>
                     <Sidebar></Sidebar>
-                    <Route exact path="/" component={ Article }/>
-                    <Route path="/static" component={ Static }/>
+                    <Route path="/article" component={ Article }/>
+                    <Route exact path="/" component={ Static }/>
                 </div>
             </Router>
         );
