@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import { 
     BrowserRouter as Router,
     Route,
-    Switch
+    Switch,
 } from 'react-router-dom';
 
 //引入组件
-import Article from './views/Article';
-import Static from './views/Static';
+import ArticleList from './views/Article/List';
+import ArticleAdd from './views/Article/Add';
+import Static from './views/Static/Static';
 import Header from './views/components/Header';
 import Sidebar from './views/components/Sidebar';
 
@@ -29,8 +30,11 @@ class App extends Component {
                 <div className='container'>
                     <Header></Header>
                     <Sidebar></Sidebar>
-                    <Route path="/article" component={ Article }/>
                     <Route exact path="/" component={ Static }/>
+                    <Switch>
+                        <Route exact path="/article" component={ ArticleList }/>
+                        <Route path="/article/add" component={ ArticleAdd }/>
+                    </Switch>
                 </div>
             </Router>
         );

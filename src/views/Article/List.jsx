@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { 
-    Link
+    Link,
+    Switch,
+    Route
 } from 'react-router-dom';
 
-import Tool from './components/Tool';
+import Add from './Add';
 
 /**
  * 
  * 
- * @class Article
+ * @class List
  * @extends {Component}
  */
-class Article extends Component {
+class List extends Component {
     constructor() {
         super();
     }
@@ -19,7 +21,13 @@ class Article extends Component {
         return (
             <div className='main'>
                 <div className='warpper'>
-                    <Tool></Tool>
+                    <div className='tool clear'>
+                        <div className='search'>
+                            <input type="text"/>
+                            <a href="" className='btn'>搜索</a>
+                        </div>
+                        <Link className='btn fr' to='/article/add'>新建</Link>
+                    </div>
                     <table className='table'>
                         <thead>
                             <tr>
@@ -125,4 +133,4 @@ class Article extends Component {
     }
 }
 
-export default Article;
+export default List;
