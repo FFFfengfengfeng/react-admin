@@ -7,7 +7,7 @@ body,html{
     background-color: #FFF;
     font-family: 'Microsoft YaHei';
     height: 100%;
-    background-color: #F2F2F2;
+    background-color: #F9F9F9;
 }
 ul,li,ol{
     list-style: none;
@@ -64,6 +64,49 @@ ul,li,ol{
     transition: all .25s;
 }
 .menu a.active{
+    background-color: #1890FF;
+    color: #FFF;
+}
+.warpper{
+    background-color: #FFF;
+    padding: 20px;
+}
+.table{
+    width: 100%;
+    border: 1px solid #F2F2F2;
+    border-collapse: collapse;
+    color: rgba(0, 0, 0, .85);
+}
+.table th{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+}
+.table thead{
+    background-color: #F9F9F9;
+}
+.table th,
+.table td{
+    padding: 15px;
+}
+.page{
+    margin-top: 20px;
+    text-align: right;
+}
+.page a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .85);
+    font-size: 12px;
+    border: 1px solid #F2F2F2;
+    padding: 3px 8px;
+    margin-left: 5px;
+    transition: all .25s;
+}
+.page a:hover{
+    background-color: #F2F2F2;
+}
+.page a.active{
     background-color: #1890FF;
     color: #FFF;
 }
