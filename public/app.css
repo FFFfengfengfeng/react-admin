@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 body,html{
-    background-color: #FFF;
-    font-family: 'Microsoft YaHei';
+    font-family: "Monospaced Number","Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
     height: 100%;
-    background-color: #F9F9F9;
+    background-color: #f0f2f5;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 ul,li,ol{
     list-style: none;
@@ -48,6 +51,7 @@ ul,li,ol{
 }
 .menu{
     text-align: center;
+    font-size: 14px;
 }
 .menu h3{
     padding: 15px 0;
@@ -70,6 +74,7 @@ ul,li,ol{
 .warpper{
     background-color: #FFF;
     padding: 20px;
+    margin-bottom: 30px;
 }
 .table{
     width: 100%;
@@ -85,9 +90,38 @@ ul,li,ol{
 .table thead{
     background-color: #F9F9F9;
 }
+.table tbody tr{
+    transition: all .25s;
+}
+.table tbody tr:hover{
+    background-color: #E6F7FF;
+}
+.table td{
+    border-bottom: 1px solid #F2F2F2;
+}
+.table tr:last-child td{
+    border-bottom: none;
+}
 .table th,
 .table td{
     padding: 15px;
+}
+.operate{
+    position: relative;
+}
+.operate a{
+    color: #1890FF;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.operate span{
+    height: 10px;
+    background-color: #1890FF;
+    width: 1px;
+    display: block;
+    position: absolute;
+    left: 53px;
+    top: 22px;
 }
 .page{
     margin-top: 20px;
@@ -109,4 +143,51 @@ ul,li,ol{
 .page a.active{
     background-color: #1890FF;
     color: #FFF;
+}
+.tool{
+    position: relative;
+    margin-bottom: 30px;
+}
+.search{
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    border: 1px solid #F2F2F2;
+    line-height: 28px;
+    vertical-align: middle;
+}
+.search input{
+    display: inline-block;
+    border: none;
+    width: 230px;
+    outline: none;
+    vertical-align: middle;
+    line-height: 33px;
+    height: 33px;
+    color: #666;
+    font-family: inherit;
+    padding-left: 10px;
+}
+.btn{
+    line-height: 33px;
+    height: 33px;
+    text-align: center;
+    background-color: #1890FF;
+    color: #FFF;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+/*common*/
+.clear::after{
+    display: block;
+    clear: both;
+    content: ' ';
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
 }

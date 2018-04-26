@@ -3,6 +3,8 @@ import {
     Link
 } from 'react-router-dom';
 
+import Tool from './components/Tool';
+
 /**
  * 
  * 
@@ -17,6 +19,7 @@ class Article extends Component {
         return (
             <div className='main'>
                 <div className='warpper'>
+                    <Tool></Tool>
                     <table className='table'>
                         <thead>
                             <tr>
@@ -51,8 +54,60 @@ class Article extends Component {
                                 <td>
                                     <p>1</p>
                                 </td>
+                                <td className='operate'>
+                                    <a href="">编辑</a>
+                                    <span></span>
+                                    <a href="">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"/>
+                                </td>
                                 <td>
                                     <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td className='operate'>
+                                    <a href="">编辑</a>
+                                    <span></span>
+                                    <a href="">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"/>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td>
+                                    <p>1</p>
+                                </td>
+                                <td className='operate'>
+                                    <a href="">编辑</a>
+                                    <span></span>
+                                    <a href="">删除</a>
                                 </td>
                             </tr>
                         </tbody>

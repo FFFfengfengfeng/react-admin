@@ -12,13 +12,11 @@ import Static from './views/Static';
 import Header from './views/components/Header';
 import Sidebar from './views/components/Sidebar';
 
-/**
- * 
- * 
- * @class App
- * @extends {Component}
- */
 class App extends Component {
+    /**
+     * @class App
+     * @extends {Component}
+     */
     constructor() {
         super();
     }
