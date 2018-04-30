@@ -24,6 +24,10 @@ class Add extends Component {
                         <span>标题:</span>
                         <input type="text"/>
                     </div>
+                    <div className='form'>
+                        <span>标签:</span>
+                        <input type="text"/>
+                    </div>
                 </div>
                 <MarkDown></MarkDown>
                 <div className='tool'>
