@@ -187,6 +187,9 @@ ul,li,ol{
     background-color: #FFF;
     margin-bottom: 30px;
 }
+.form{
+    margin: 5px 0;
+}
 .form span{
     display: inline-block;
     width: 50px;
