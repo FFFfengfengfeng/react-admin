@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { domin } from '../../util';
+import moment from 'moment';
 import { 
     Link,
     Switch,
@@ -16,6 +19,31 @@ import Add from './Add';
 class List extends Component {
     constructor() {
         super();
+        this.state = {
+            list: [],
+            total: 0
+        }
+    }
+    componentDidMount() {
+        this.getList();
+    }
+    getList() {
+        let _this = this;
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:7001/article/list',
+            data: {
+                size: 15,
+                page: 1
+            }
+        }).then((res)=>{
+            if (res.data.status === '1') {
+                _this.setState({
+                    list: res.data.list,
+                    total: res.data.total
+                });
+            }
+        });   
     }
     render() {
         return (
@@ -37,87 +65,38 @@ class List extends Component {
                                 <th>id</th>
                                 <th>标题</th>
                                 <th>浏览</th>
-                                <th>评论</th>
+                                {/* <th>评论</th> */}
                                 <th>日期</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <input type="checkbox"/>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td className='operate'>
-                                    <a href="">编辑</a>
-                                    <span></span>
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox"/>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td className='operate'>
-                                    <a href="">编辑</a>
-                                    <span></span>
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox"/>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td>
-                                    <p>1</p>
-                                </td>
-                                <td className='operate'>
-                                    <a href="">编辑</a>
-                                    <span></span>
-                                    <a href="">删除</a>
-                                </td>
-                            </tr>
+                            {
+                                this.state.list.map(function (item, index) {
+                                    return  <tr key={ index }>
+                                                <td>
+                                                    <input type="checkbox"/>
+                                                </td>
+                                                <td>
+                                                    <p>{ item.id }</p>
+                                                </td>
+                                                <td>
+                                                    <p>{ item.title || '' }</p>
+                                                </td>
+                                                <td>
+                                                    <p>{ item.view || 0 }</p>
+                                                </td>
+                                                <td>
+                                                    <p>{ moment(item.created_at).format('YYYY-MM-DD HH:mm:ss') }</p>
+                                                </td>
+                                                <td className='operate'>
+                                                    <a href="">编辑</a>
+                                                    <span></span>
+                                                    <a href="">删除</a>
+                                                </td>
+                                            </tr>
+                                })
+                            }
                         </tbody>
                     </table>
                     <div className='page'>

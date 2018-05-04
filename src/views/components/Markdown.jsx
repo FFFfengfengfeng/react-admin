@@ -19,7 +19,7 @@ class MarkDown extends Component {
         const editorProps = {
             height: 500,
             contentFormat: 'html',
-            initialContent: '<p>Hello World!</p>',
+            initialContent: '<p></p>',
             onChange: this.handleChange,
             onRawChange: this.handleRawChange
         }
@@ -31,11 +31,11 @@ class MarkDown extends Component {
         )
     }
     handleChange = (content) => {
-        console.log(content)
+        this.props.handleChangeContent(content);
     }
     
     handleRawChange = (rawContent) => {
-        console.log(rawContent)
+        // this.props.handleChange(rawContent);
     }
 }
 
