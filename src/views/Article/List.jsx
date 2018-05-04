@@ -23,6 +23,7 @@ class List extends Component {
             list: [],
             total: 0
         }
+        // this.handleDelete = this.handleDelete.bind(this);
     }
     componentDidMount() {
         this.getList();
@@ -45,7 +46,25 @@ class List extends Component {
             }
         });   
     }
+    handleDelete(id) {
+        let _this = this;
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:7001/article/delete',
+            data: {
+                id: id
+            }
+        }).then((res)=>{
+            if (res.data.status === '1') {
+                // _this.setState({
+                //     list: res.data.list,
+                //     total: res.data.total
+                // });
+            }
+        });  
+    }
     render() {
+        let _this = this;
         return (
             <div className='main'>
                 <div className='warpper'>
@@ -72,7 +91,7 @@ class List extends Component {
                         </thead>
                         <tbody>
                             {
-                                this.state.list.map(function (item, index) {
+                                _this.state.list.map(function (item, index) {
                                     return  <tr key={ index }>
                                                 <td>
                                                     <input type="checkbox"/>
@@ -92,7 +111,7 @@ class List extends Component {
                                                 <td className='operate'>
                                                     <a href="">编辑</a>
                                                     <span></span>
-                                                    <a href="">删除</a>
+                                                    <a href="javascript:;" onClick={_this.handleDelete.bind(_this, item.id)}>删除</a>
                                                 </td>
                                             </tr>
                                 })
