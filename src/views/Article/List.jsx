@@ -56,10 +56,7 @@ class List extends Component {
             }
         }).then((res)=>{
             if (res.data.status === '1') {
-                // _this.setState({
-                //     list: res.data.list,
-                //     total: res.data.total
-                // });
+                _this.getList();
             }
         });  
     }
