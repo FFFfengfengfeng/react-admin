@@ -20,13 +20,7 @@ class App extends Component {
      * @class App
      * @extends {Component}
      */
-    constructor() {
-        super();
-    }
     render() {
-        let activeStyle = {
-            color: 'red'
-        }
         return (
             <Router>
                 <div className='container'>

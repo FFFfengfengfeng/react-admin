@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 import BraftEditor from 'braft-editor';
 import 'braft-editor/dist/braft.css';
 
@@ -10,18 +9,14 @@ import 'braft-editor/dist/braft.css';
  * @extends {Component}
  */
 class MarkDown extends Component {
-    constructor() {
-        super()
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleRawChange = this.handleRawChange.bind(this);
-    }
     render() {
-        const editorProps = {
+        let editorProps = {
             height: 500,
             contentFormat: 'html',
-            initialContent: '<p></p>',
+            initialContent: this.props.content,
             onChange: this.handleChange,
-            onRawChange: this.handleRawChange
+            onRawChange: this.handleRawChange,
+            contentId: this.props.id
         }
       
         return (

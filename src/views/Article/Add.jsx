@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { domin } from '../../util';
 import { 
     Link,
-    Switch,
-    Route
 } from 'react-router-dom';
 import MarkDown from '../components/Markdown';
 /**
@@ -15,11 +12,11 @@ import MarkDown from '../components/Markdown';
  * @extends {Component}
  */
 class Add extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props)
         this.state = {
-            content: '',
             title: '',
+            content: ''
         }
     }
     render() {
@@ -58,7 +55,7 @@ class Add extends Component {
         let _this = this;
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:7001/article/add',
+            url: domin + '/article/add',
             data: {
                 title: _this.state.title,
                 content: _this.state.content

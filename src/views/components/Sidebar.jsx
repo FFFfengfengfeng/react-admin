@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Redirect,
-    NavLink,
-    Switch
+    NavLink
 } from 'react-router-dom';
 
 class Sidebar extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div className='sidebar'>
