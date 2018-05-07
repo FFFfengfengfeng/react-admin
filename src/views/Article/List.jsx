@@ -56,10 +56,7 @@ class List extends Component {
             }
         }).then((res)=>{
             if (res.data.status === '1') {
-                // _this.setState({
-                //     list: res.data.list,
-                //     total: res.data.total
-                // });
+                _this.getList();
             }
         });  
     }
@@ -109,9 +106,9 @@ class List extends Component {
                                                     <p>{ moment(item.created_at).format('YYYY-MM-DD HH:mm:ss') }</p>
                                                 </td>
                                                 <td className='operate'>
-                                                    <a href="">编辑</a>
+                                                    <Link to={'/article/edit/' + item.id}>编辑</Link>
                                                     <span></span>
-                                                    <a href="javascript:;" onClick={_this.handleDelete.bind(_this, item.id)}>删除</a>
+                                                    <a href="javascript:;" onClick={_this.handleDelete.bind(item.id)}>删除</a>
                                                 </td>
                                             </tr>
                                 })
