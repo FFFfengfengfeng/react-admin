@@ -4,11 +4,7 @@ import { domin } from '../../util';
 import moment from 'moment';
 import { 
     Link,
-    Switch,
-    Route
 } from 'react-router-dom';
-
-import Add from './Add';
 
 /**
  * 
@@ -32,7 +28,7 @@ class List extends Component {
         let _this = this;
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:7001/article/list',
+            url: domin + '/article/list',
             data: {
                 size: 15,
                 page: 1
@@ -50,7 +46,7 @@ class List extends Component {
         let _this = this;
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:7001/article/delete',
+            url: domin + '/article/delete',
             data: {
                 id: id
             }
@@ -106,9 +102,9 @@ class List extends Component {
                                                     <p>{ moment(item.created_at).format('YYYY-MM-DD HH:mm:ss') }</p>
                                                 </td>
                                                 <td className='operate'>
-                                                    <a href="">编辑</a>
+                                                    <Link to={'/article/edit/' + item.id}>编辑</Link>
                                                     <span></span>
-                                                    <a href="javascript:;" onClick={_this.handleDelete.bind(_this, item.id)}>删除</a>
+                                                    <a href="javascript:;" onClick={_this.handleDelete.bind(item.id)}>删除</a>
                                                 </td>
                                             </tr>
                                 })

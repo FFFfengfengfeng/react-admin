@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 
 /**
  * 
@@ -8,9 +7,6 @@ import ReactDom from 'react-dom';
  * @extends {Component}
  */
 class Header extends Component {
-    constructor() {
-        super();
-    }
     render() {
         return (
             <div className='header'>

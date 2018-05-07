@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
-import { 
-    Link,
-} from 'react-router-dom';
 
 /**
  * 
@@ -11,9 +7,6 @@ import {
  * @extends {Component}
  */
 class Static extends Component {
-    constructor() {
-        super();
-    }
     render() {
         return (
             <div className='main'>
